@@ -5,8 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-  title : 'Article one|Faraz Ahmed' ,
+var articles={
+    article-one: {
+        title : 'Article one|Faraz Ahmed' ,
   heading:'Article One',
   date:'Sept 18th 2016',
   content:`<p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
@@ -16,8 +17,50 @@ var articleOne = {
         </p>
         
         <p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
+        </p>`},
+    articl-two:{ 
+        title : 'Article Two|Faraz Ahmed' ,
+        heading:'Article Two',
+         date:'Sept 18th 2016',
+        content:` <p>This is the content for my 2nd article.
+        This is the content for my 2nd article.This is the content for my 2nd article.This is the content for my 2nd article.
+        This is the content for my 2nd article.
+        </p>
+        
+        <p>This is the content for my 2nd article.
+        This is the content for my 2nd article.This is the content for my 2nd article.This is the content for my 2nd article.
+        This is the content for my 2nd article.
+        </p>
+        
+        <p>This is the content for my 2nd article.
+        This is the content for my 2nd article.This is the content for my 2nd article.This is the content for my 2nd article.
+        This is the content for my 2nd article.
         </p>`
+    },
+    article-three:{ 
+        title : 'Article Three|Faraz Ahmed' ,
+        heading:'Article Three',
+         date:'Sept 18th 2016',
+        content:`  <p>
+        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
+        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
+        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
+       </p>
+        
+        <p>
+        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
+        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
+        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
+       </p>
+       
+       <p>
+       This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
+        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
+        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
+       </p>`
+    }
 };
+
 
 function createTemplate(data){
     var title = data.title;
@@ -54,16 +97,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res){
-  res.send(createTemplate(articleOne));
-});
-
-app.get('/article-two', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+app.get('/:articleName', function(req,res){
+    //articleName == articleOne
+    //articles[articleName] =={} content object for article one
+  res.send(createTemplate(articles[articleName]));
 });
 
 
