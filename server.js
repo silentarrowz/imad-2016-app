@@ -6,11 +6,11 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-    article-one: {
-        title : 'Article one|Faraz Ahmed' ,
-  heading:'Article One',
-  date:'Sept 18th 2016',
-  content:`<p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
+    'article-one': {
+    title : 'Article one|Faraz Ahmed' ,
+    heading:'Article One',
+    date:'Sept 18th 2016',
+    content:`<p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
         </p>
         
         <p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
@@ -18,7 +18,7 @@ var articles={
         
         <p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
         </p>`},
-    articl-two:{ 
+    'articl-two':{ 
         title : 'Article Two|Faraz Ahmed' ,
         heading:'Article Two',
          date:'Sept 18th 2016',
@@ -37,7 +37,7 @@ var articles={
         This is the content for my 2nd article.
         </p>`
     },
-    article-three:{ 
+    'article-three':{ 
         title : 'Article Three|Faraz Ahmed' ,
         heading:'Article Three',
          date:'Sept 18th 2016',
