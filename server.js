@@ -18,7 +18,7 @@ var articles={
         
         <p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
         </p>`},
-    'articl-two':{ 
+    'article-two':{ 
         title : 'Article Two|Faraz Ahmed' ,
         heading:'Article Two',
          date:'Sept 18th 2016',
