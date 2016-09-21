@@ -103,7 +103,7 @@ app.get('/:articleName', function(req,res){
     var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
-app.get('/profile.html',function(req,res){
+app.get('/profile',function(req,res){
     res.sendFile(path.join(__dirname,'ui','portfolio.html'));
 });
 
