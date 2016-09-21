@@ -1,7 +1,9 @@
 #aboutme{
- background-color:#18bc9c;
+ width:70%;
+ margin:0 auto;
 }
 .hr1{
+
   position:relative;
   right:40px;
 }
@@ -10,27 +12,47 @@
   bottom:62px;
   left:40px;
 }
+.hr1,.hr2{
+  border:2px solid white;
+}
 .fa-star{
   position:relative;
   bottom:31px;
+
 }
-.scrolltop{
-  display:none;
+#aboutme{
+  color:white;
+}
+#aboutme h1{
+  
+  font-weight:900;
 }
 #aboutme p{
-  display:none;
+  margin-top:-35px;
   max-width:500px;
- margin:0 auto;
+ 
   font-size:16px;
   font-weight:700;
   text-align:center;
   padding-bottom:15px;
 }
+
 hr{
   width:60px;
   border:1px solid black;
 }
+
 #aboutme img{
-  margin:0 auto;
+  
   display:inline-block;
 }
+
+.container-fluid {
+  text-align:center;
+  background-color:#18bc9c;
+  margin-top:51px;
+}
+.navbar-nav>li>.active{
+  background-color:green;
+}
+
