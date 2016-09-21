@@ -1,0 +1,36 @@
+#aboutme{
+ background-color:#18bc9c;
+}
+.hr1{
+  position:relative;
+  right:40px;
+}
+.hr2{
+  position:relative;
+  bottom:62px;
+  left:40px;
+}
+.fa-star{
+  position:relative;
+  bottom:31px;
+}
+.scrolltop{
+  display:none;
+}
+#aboutme p{
+  display:none;
+  max-width:500px;
+ margin:0 auto;
+  font-size:16px;
+  font-weight:700;
+  text-align:center;
+  padding-bottom:15px;
+}
+hr{
+  width:60px;
+  border:1px solid black;
+}
+#aboutme img{
+  margin:0 auto;
+  display:inline-block;
+}
