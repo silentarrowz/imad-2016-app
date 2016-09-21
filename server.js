@@ -97,15 +97,23 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/profile',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','profile.html'));
+});
+
+app.get('/ui/profile.css',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','profile.css'));
+ });
+
 app.get('/:articleName', function(req,res){
     //articleName == articleOne
     //articles[articleName] =={} content object for article one
     var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
-app.get('/profile',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','profile.html'));
-});
+
+
+ 
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
