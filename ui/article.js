@@ -27,7 +27,7 @@ commentBtn.onclick = function (){
 
        
     };
-   request.open('GET','http://localhost:8080/submit_comment?comment='+comment,true);
+   request.open('GET','http://silentarrowz.imad.hasura-app.io/submit_comment?comment='+comment,true);
    request.send(null);
 
 };//button onclick function ends
