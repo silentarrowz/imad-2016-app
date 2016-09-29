@@ -17,7 +17,19 @@ var articles={
         </p>
         
         <p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
-        </p>`},
+        </p>`
+        /*
+        <label>Enter comments below</label></br>
+             <textarea name='comment' id='comment1'></textarea><br />
+              <input type="submit" id="comment_btn1" value="Submit" class="btn btn-warning"></input>
+              <hr>
+              <p>Comments :</p><br>
+              <div id="comments1"></div>
+              */
+
+
+        
+    },
     'article-two':{ 
         title : 'Article Two|Faraz Ahmed' ,
         heading:'Article Two',
@@ -36,6 +48,15 @@ var articles={
         This is the content for my 2nd article.This is the content for my 2nd article.This is the content for my 2nd article.
         This is the content for my 2nd article.
         </p>`
+        /*
+        <label>Enter comments below</label></br>
+             <textarea name='comment' id='comment2'></textarea><br>
+              <input type="submit" id="comment_btn2" value="Submit"></input>
+              <hr>
+              <p>Comments :</p><br>
+              <div id="comments2">comments appear here</div>
+            */
+        
     },
     'article-three':{ 
         title : 'Article Three|Faraz Ahmed' ,
@@ -58,6 +79,16 @@ var articles={
         This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
         This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
        </p>`
+       /*
+       <label>Enter comments below</label></br>
+             <textarea name='comment' id='comment3'></textarea><br />
+              <input type="submit" id="comment_btn3" value="Submit" class="btn btn-warning"></input>
+              <hr>
+              <p>Comments :</p><br>
+              <div id="comments3"></div>
+    */
+
+       
     }
 };
 
@@ -69,25 +100,40 @@ function createTemplate(data){
     var content = data.content;
     var htmlTemplate = `<!doctype html>
     <html>
-     <head><title>Article ONe</title>
+     <head><title>${heading}</title>
      
-     <link href="/ui/style.css" rel="stylesheet">
-     
+     <link href="/ui/article.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Aguafina+Script" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Almendra+SC" rel="stylesheet">
      </head>
     <body>
-        <div class="container">
-        <div>${title}</div>
+        <div class="container article">
+        <div class="full">
+        <div class="headline">${heading}</div> 
         <a href="/">Home</a>
+        
         <hr/>
         <h3>${heading}</h3>
-        <div>${date}</div>
+        <div class="date">${date}</div>
         <div>
+        <div class="para">
             ${content}
-            
+            </div>
+             <label>Enter comments below</label></br>
+             <textarea name='comment' id='comment'></textarea><br />
+              <input type="submit" id="comment_btn" value="Submit" class="btn btn-warning"></input>
+              <hr>
+              <p>Comments :<br>
+                <span id="comments"></span>
+              </p>
+              
+        </div>
+        
         </div>
         </div>
+        
     </body>
-    
+    <script type="text/javascript" src="/ui/article.js" ></script>
     </html>`;
     return htmlTemplate;
 }
@@ -104,6 +150,57 @@ app.get('/profile',function(req,res){
 app.get('/ui/profile.css',function(req,res){
     res.sendFile(path.join(__dirname,'ui','profile.css'));
  });
+
+app.get('/ui/article.css',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','article.css'));
+ });
+
+
+
+var comments=[];
+app.get('/submit_comment',function(req,res){
+    //to get the comments
+ var comment=req.query.comment;
+ comments.push(comment);
+ console.log('comments is: ',comments);
+ res.send(JSON.stringify(comments));
+
+    //to render those comments on the page
+});
+
+app.get('/ui/main.js',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','main.js'));
+ });
+
+app.get('/ui/article.js',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','article.js'));
+ });
+
+var counter=0;
+app.get('/counter', function(req,res){
+    counter = counter+1;
+    //we can only send a string as a response
+    //and that's why we convert  it to string using toString()
+    res.send(counter.toString());
+});
+
+var names=[];
+app.get('/submit-name',function(req,res){
+    //get the name from request object
+    
+
+
+    //this is for the ?name=something part
+    //express gets that part by using req.query.name
+    var name=req.query.name;
+    console.log('name is: ',name);
+  //we could use req.params.name if the url was /submit-name/:name
+
+    names.push(name);
+    console.log('names is: ',names);
+    res.send(JSON.stringify(names));
+});
+
 
 app.get('/:articleName', function(req,res){
     //articleName == articleOne
