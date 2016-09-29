@@ -35,7 +35,7 @@ window.onload = function(){
     	 };//button onclick function ends
 
     	 //Make the request
-    	 request.open('GET','http://localhost:8080/submit-name?name='+name,true);
+    	 request.open('GET','http://silentarrowz.imad.hasura-app.io/submit-name?name='+name,true);
     	 request.send(null);
     	
     }; //button onclick function ends
