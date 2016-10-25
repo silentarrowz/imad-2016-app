@@ -5,7 +5,23 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 
+
+app.get('/profile',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','profile.html'));
+});
+
+app.get('/ui/profile.css',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','profile.css'));
+ });
+
+app.get('/ui/article.css',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','article.css'));
+ });
+ 
 var articles={
     'article-one': {
     title : 'Article one|Faraz Ahmed' ,
@@ -140,22 +156,7 @@ function createTemplate(data){
 }
 
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
 
-
-app.get('/profile',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','profile.html'));
-});
-
-app.get('/ui/profile.css',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','profile.css'));
- });
-
-app.get('/ui/article.css',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','article.css'));
- });
 
 
 
