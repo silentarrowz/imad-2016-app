@@ -9,7 +9,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-/*
 app.get('/profile',function(req,res){
     res.sendFile(path.join(__dirname,'ui','profile.html'));
 });
@@ -44,7 +43,7 @@ var articles={
               <div id="comments1"></div>
               */
 
-/*
+
         
     },
     'article-two':{ 
@@ -75,7 +74,7 @@ var articles={
             */
         
     },
-    /*
+    
     'article-three':{ 
         title : 'Article Three|Faraz Ahmed' ,
         heading:'Article Three',
@@ -106,7 +105,7 @@ var articles={
               <div id="comments3"></div>
     */
 
-       /*
+       
     }
 };
 
@@ -212,7 +211,7 @@ app.get('/:articleName', function(req,res){
     var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
-*/
+
 
  
 
