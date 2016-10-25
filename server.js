@@ -44,7 +44,7 @@ var articles={
               <div id="comments1"></div>
               */
 
-
+/*
         
     },
     'article-two':{ 
@@ -75,6 +75,7 @@ var articles={
             */
         
     },
+    /*
     'article-three':{ 
         title : 'Article Three|Faraz Ahmed' ,
         heading:'Article Three',
@@ -105,7 +106,7 @@ var articles={
               <div id="comments3"></div>
     */
 
-       
+       /*
     }
 };
 
