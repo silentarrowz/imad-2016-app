@@ -1,7 +1,7 @@
 window.onclick = function(){
 var displayNews = document.getElementById('currentNews');
 var newsButton = document.getElementById('getnews');
-newsButton.onClick = function(){
+newsButton.onclick = function(){
 	alert('the button is clicked');
 	var newsxr = new XMLHttpRequest();
 	newsxr.onreadystatechange = function(){
