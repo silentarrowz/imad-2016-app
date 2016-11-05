@@ -2,112 +2,20 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-
 var app = express();
 app.use(morgan('combined'));
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
-app.get('/profile',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','profile.html'));
-});
-
-app.get('/ui/profile.css',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','profile.css'));
- });
-
-app.get('/ui/article.css',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','article.css'));
- });
- 
-var articles={
-    'article-one': {
-    title : 'Article one|Faraz Ahmed' ,
-    heading:'Article One',
-    date:'Sept 18th 2016',
-    content:`<p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
-        </p>
-        
-        <p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
-        </p>
-        
-        <p>This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.This is the content for my 1st article.
-        </p>`
-        /*
-        <label>Enter comments below</label></br>
-             <textarea name='comment' id='comment1'></textarea><br />
-              <input type="submit" id="comment_btn1" value="Submit" class="btn btn-warning"></input>
-              <hr>
-              <p>Comments :</p><br>
-              <div id="comments1"></div>
-              */
 
 
-        
-    },
-    'article-two':{ 
-        title : 'Article Two|Faraz Ahmed' ,
-        heading:'Article Two',
-         date:'Sept 18th 2016',
-        content:` <p>This is the content for my 2nd article.
-        This is the content for my 2nd article.This is the content for my 2nd article.This is the content for my 2nd article.
-        This is the content for my 2nd article.
-        </p>
-        
-        <p>This is the content for my 2nd article.
-        This is the content for my 2nd article.This is the content for my 2nd article.This is the content for my 2nd article.
-        This is the content for my 2nd article.
-        </p>
-        
-        <p>This is the content for my 2nd article.
-        This is the content for my 2nd article.This is the content for my 2nd article.This is the content for my 2nd article.
-        This is the content for my 2nd article.
-        </p>`
-        /*
-        <label>Enter comments below</label></br>
-             <textarea name='comment' id='comment2'></textarea><br>
-              <input type="submit" id="comment_btn2" value="Submit"></input>
-              <hr>
-              <p>Comments :</p><br>
-              <div id="comments2">comments appear here</div>
-            */
-        
-    },
-    
-    'article-three':{ 
-        title : 'Article Three|Faraz Ahmed' ,
-        heading:'Article Three',
-         date:'Sept 18th 2016',
-        content:`  <p>
-        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
-        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
-        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
-       </p>
-        
-        <p>
-        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
-        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
-        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
-       </p>
-       
-       <p>
-       This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
-        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
-        This is the content for my 3rd article.This is the content for my 3rd article.This is the content for my 3rd article.
-       </p>`
-       /*
-       <label>Enter comments below</label></br>
-             <textarea name='comment' id='comment3'></textarea><br />
-              <input type="submit" id="comment_btn3" value="Submit" class="btn btn-warning"></input>
-              <hr>
-              <p>Comments :</p><br>
-              <div id="comments3"></div>
-    */
-
-       
-    }
+var Pool = require('pg').Pool;
+var configdb = {
+    user:'postgres',
+    database:'silentarrowz',
+    host:'localhost',
+    port:'5433',
+    password:'admin'
 };
+
+var pool = new Pool(configdb);
 
 
 function createTemplate(data){
@@ -131,7 +39,7 @@ function createTemplate(data){
         
         <hr/>
         <h3>${heading}</h3>
-        <div class="date">${date}</div>
+        <div class="date">${date.toDateString()}</div>
         <div>
         <div class="para">
             ${content}
@@ -155,10 +63,98 @@ function createTemplate(data){
     return htmlTemplate;
 }
 
+//===========================================================
+console.log('The bot is starting');
+var Twit = require('twit');
+var config = require('./config');
+console.log(config);
+var T = new Twit(config);
+console.log('The bot is starting');
+var Twit = require('twit');
+var config = require('./config');
+console.log(config);
+var T = new Twit(config);
 
 
 
 
+app.get('/t/:searchTerm', function(req, res) {
+    // User requested for "/" route, now get tweets
+    var keyword = req.params.searchTerm;
+    console.log('keyword is : ', keyword);
+    var params ={
+  q:'hillary',
+  count:5
+}
+params['q']=keyword;
+console.log('params object is : ',params);
+    T.get('search/tweets', params, function(err, data) {
+        //Tweets received, now send the tweets to the user
+        var tweets = data.statuses;
+        console.log('tweets is : ',tweets);
+        
+        var tweetz=[];
+    for(var i=0;i<tweets.length;i++){
+    console.log(tweets[i].text+'================================');
+    tweetz.push(tweets[i].text);
+    
+    
+  }
+  
+        res.send(tweetz);
+    });
+});
+
+
+
+//============================================================
+
+
+
+
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+});
+
+app.get('/weather',function(req,res){
+  res.sendFile(path.join(__dirname,'weather.html'));
+});
+
+app.get('/news',function(req,res){
+  res.sendFile(path.join(__dirname,'news.html'));
+});
+
+app.get('/news.js',function(req,res){
+  res.sendFile(path.join(__dirname,'news.js'));
+});
+
+app.get('/news.css',function(req,res){
+  res.sendFile(path.join(__dirname,'news.css'));
+});
+
+app.get('/weather.css',function(req,res){
+  res.sendFile(path.join(__dirname,'weather.css'));
+});
+
+app.get('/weather.js',function(req,res){
+  res.sendFile(path.join(__dirname,'weather.js'));
+});
+
+app.get('/gmaps',function(req,res){
+  res.sendFile(path.join(__dirname,'gmaps.html'));
+});
+
+
+/*
+app.get('/profile',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','profile.html'));
+});
+*/
+
+app.get('/ui/profile.css',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','profile.css'));
+ });
 
 var comments=[];
 app.get('/submit_comment',function(req,res){
@@ -173,10 +169,6 @@ app.get('/submit_comment',function(req,res){
 
 app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
- });
-
-app.get('/ui/article.js',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','article.js'));
  });
 
 var counter=0;
@@ -205,18 +197,36 @@ app.get('/submit-name',function(req,res){
 });
 
 
-app.get('/:articleName', function(req,res){
+app.get('/articles/:articleName', function(req,res){
     //articleName == articleOne
     //articles[articleName] =={} content object for article one
-    var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
+    
+    pool.query('SELECT * FROM article WHERE title =$1',[req.params.articleName],function(err,result){
+        if(err){
+          res.status(500).send(err.toString());
+        }else{
+          if(result.rows.length===0){
+
+            res.status(404).send(result.rows);
+          }else{
+            var articleData = result.rows[0];
+            res.send(createTemplate(articleData));
+          }
+        }
+    });
+
+  
 });
 
 
  
 
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+app.get('/ui/article.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'article.css'));
+});
+
+app.get('/ui/article.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'article.js'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
