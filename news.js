@@ -1,4 +1,4 @@
-window.onclick = function(){
+window.onload = function(){
 var displayNews = document.getElementById('currentNews');
 var newsButton = document.getElementById('getnews');
 newsButton.onclick = function(){
