@@ -1,0 +1,28 @@
+img{
+	width:200px;
+	height:200px;
+	}
+
+p{
+	float:left;
+	width:200px;
+	font-size:10px;
+	margin-right: 10px;
+	height:280px;
+	border:1px solid grey;
+	}
+
+.title{
+	font-weight:bold;
+	font-size:12px;
+	width:200px;
+}
+.container-fluid {
+    width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+#currentNews{
+	
+    text-align: center;
+}
