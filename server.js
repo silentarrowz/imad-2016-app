@@ -85,7 +85,8 @@ app.get('/t/:searchTerm', function(req, res) {
     var params ={
   q:'hillary',
   count:5
-}
+};
+
 params['q']=keyword;
 console.log('params object is : ',params);
     T.get('search/tweets', params, function(err, data) {
