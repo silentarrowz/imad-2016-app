@@ -2,6 +2,7 @@ window.onclick = function(){
 var displayNews = document.getElementById('currentNews');
 var newsButton = document.getElementById('getnews');
 newsButton.onclick = function(){
+	alert('the button is clicked');
 	var newsxr = new XMLHttpRequest();
 	newsxr.onreadystatechange = function(){
 		if(newsxr.readyState ===XMLHttpRequest.DONE && newsxr.status ===200){
@@ -20,6 +21,7 @@ newsButton.onclick = function(){
 				urlToImage = currentArticles[i]['urlToImage'];
 				 newsDisplay = newsDisplay + "<p>"+"<span class='title'>"+  title+"</span>"+  "<br>"+description+"<br>"+"<img src='"+urlToImage+"'</img>"+"</p>";
 			}
+			alert('displaying the news now');
 			console.log('current news is : ',currentNews);
 			displayNews.innerHTML = newsDisplay;
 		}
