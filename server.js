@@ -11,7 +11,7 @@ var configdb = {
     user:'postgres',
     database:'silentarrowz',
     host:'localhost',
-    port:'5433',
+    port:'5432',
     password:'admin'
 };
 
