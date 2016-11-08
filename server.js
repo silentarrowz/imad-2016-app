@@ -11,7 +11,7 @@ var configdb = {
     user:'silentarrowz',
     database:'silentarrowz',
     host:'db.imad.hasura-ap.io',
-    port:'5433',
+    port:'5432',
     password:process.evn.DB_PASSWORD
 };
 
