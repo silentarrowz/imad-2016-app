@@ -8,11 +8,11 @@ app.use(morgan('combined'));
 
 var Pool = require('pg').Pool;
 var configdb = {
-    user:'postgres',
+    user:'silentarrowz',
     database:'silentarrowz',
     host:'db.imad.hasura-ap.io',
     port:'5433',
-    password:'admin'
+    password:process.evn.DB_PASSWORD
 };
 
 var pool = new Pool(configdb);
