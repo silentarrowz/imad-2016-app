@@ -10,8 +10,8 @@ var Pool = require('pg').Pool;
 var configdb = {
     user:'postgres',
     database:'silentarrowz',
-    host:'localhost',
-    port:'5432',
+    host:'db.imad.hasura-ap.io',
+    port:'5433',
     password:'admin'
 };
 
