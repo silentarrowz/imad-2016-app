@@ -1,10 +1,11 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var crypto = require('crypto');
+var bodyParser = require('body-parser');
 var app = express();
 app.use(morgan('combined'));
-
+app.use(bodyParser.json());
 
 var Pool = require('pg').Pool;
 var configdb = {
@@ -118,6 +119,40 @@ console.log('params object is : ',params);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
 });
+
+function hash(input,salt){
+  //how to create hash
+  var hashed = crypto.pbkdf2Sync(input,salt, 10000, 512, 'sha512');
+  return ['pbkdf2Sync',salt,hashed.toString('hex')].join('$');
+}
+
+app.post('/create-user',function(req,res){
+  //take username and password as input and create entry in user table
+  
+  var username = req.body.username;
+  var password = req.body.password;
+  console.log(username);
+  var salt= crypto.randomBytes(128).toString('hex');
+  var dbString = hash(password,salt);
+  
+  
+  pool.query('INSERT INTO "user"(username,password) VALUES($1,$2)',[username,dbString],function(err,result){
+    if(err){
+      res.status(500).send(err.toString());
+
+    }else{
+      res.send('user succesfully created');
+    }
+  });
+
+
+});
+
+app.get('/hash/:input',function(req,res){
+  var hashString = hash(req.params.input,'this-is-some-random-string');
+  res.send(hashString);
+});
+
 
 app.get('/weather',function(req,res){
   res.sendFile(path.join(__dirname,'weather.html'));
