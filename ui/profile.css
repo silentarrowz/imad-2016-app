@@ -1,58 +1,117 @@
 #aboutme{
+  
  width:70%;
- margin:0 auto;
+ 
+  
 }
-.hr1{
-
-  position:relative;
-  right:40px;
+#fullBody{
+  width:70%;
+  margin:0 auto;
 }
-.hr2{
-  position:relative;
-  bottom:62px;
-  left:40px;
-}
-.hr1,.hr2{
-  border:2px solid white;
-}
-.fa-star{
-  position:relative;
-  bottom:31px;
+#column-main{
+  border:2px solid black;
+  min-height:600px;
+ background-color: white;
+ box-shadow: 2px 2px 10px 10px;
+ padding-bottom: 20px;
 
 }
-#aboutme{
+#navigation{
+  background-color: #3b5998;
   color:white;
+}
+
+
+#navigation a{
+  color:white;
+}
+
+
+#navigation a:hover{
+  background-color: #194194;
+}
+
+
+#aboutme, #twitterDiv{
+margin:0 auto;
   text-align:center;
 }
-#aboutme h1{
-  
-  font-weight:900;
-}
+
 #aboutme p{
-  margin: 0 auto;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    padding-bottom: 15px;
-    margin-top: -30px;
+  
+    font-size: 14px;
+    
+    text-align: left;
+    padding:10px 5px 15px 5px;
+    background-color: white;
+    border:2px solid gray;
+    
 }
 
-hr{
-  width:60px;
-  border:1px solid black;
-}
+
 
 #aboutme img{
+  max-width: 100%;
+    height: auto;
+   margin:0 auto;
+   border:1px solid gray;
+   margin-bottom: 15px;
+   margin-top: 10px;
+    border-radius: 70px;
+  /*display:inline-block;*/
   
-  display:inline-block;
 }
 
+
 .container-fluid {
-  text-align:center;
-  background-color:#18bc9c;
+    background-color:yellow;
   margin-top:51px;
+      background-color: rgba(119, 95, 7, 0.86);
+
+  padding-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .navbar-nav>li>.active{
   background-color:green;
 }
+#twitterDiv{
+  
+  border:2px solid gray;
+  width:70%;
+  text-align: center;
+  background-color: white;
+  font-size:18px;
+  color:blue;
+  
+  padding:5px 5px 5px 5px;
+  }
+#twitterDiv p{
+  text-align: left;
+  color: black;
+    font-size: 14px;
+    margin-top: 10px;
 
+}
+#twitterDiv h3{
+  color:black;
+  text-align: center;
+}
+.twitLabel{
+  color:black;
+  text-align: left;
+}
+#twitterDiv button{
+  margin: 0 auto;
+  color:black;
+}
+#tweetz hr{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border:1px dashed black;
+}
+#tweetSearch{
+  
+  color: black;
+    font-size: 14px;
+}
