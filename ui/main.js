@@ -63,7 +63,27 @@ window.onload = function(){
  //Make the request
          //request.open('GET','http://localhost:8080/submit_comment?comment='+comment,true);
          //request.send(null);
+var submitButton = document.getElementById('submit_btn');
+submitButton.onclick = function(){
+    var request = new XMLHttpRequest();
 
+    request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpRequest.DONE && request.status === 200){
+            var data = request.responseText;
+            console.log(data);
+        }
+    };
+
+
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    request.open('POST','http://silentarrowz.imad.hasura-app.io/create-user',true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username:username,password:password}));
+};
+  
+  
+  
 };//window onload function ends
 
 
