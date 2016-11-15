@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">	
+<meta name="viewport" content="width=device-width, initial-scale=1">  
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,16 +16,15 @@
 <!-- Fontawesome library -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 <link rel="stylesheet" type="text/css" href="/ui/profile.css">
-
+<script type="text/javascript" src="/ui/main.js" ></script>
 </head>
 
 <body>
  <!--Navbar Begins    -->
-  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse scrolltop">
+  <nav class="navbar navbar-fixed-top scrolltop" id="navigation">
     <div class="container">
       <!-- navbar header begins   -->
       <div class="navbar-header">
@@ -52,19 +54,64 @@
   <!--Navbar ends    -->
   
   <div class="container-fluid">
-    <div id="aboutme" class="about">
+    <div class="row" id="fullBody">
+
+     
+      <div class=" col-md-12 col-sm-12 col-xs-12" id="column-main">
+        <div id="aboutme" class="about">
       <div class="row">
-        <div class="col-lg-12 col-md-8 col-sm-6">
-          <img class="img-responsive img-circle"  src="http://res.cloudinary.com/whizzy/image/upload/v1454699647/faraz_qwdqrx.jpg" alt="">
-          <h1>Faraz Ahmed</h1>
+       
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div id="img"><img class="img-responsive"  src="http://res.cloudinary.com/whizzy/image/upload/v1454699647/faraz_qwdqrx.jpg" alt=""></div>
 
-          <hr class="hr1"><i class="fa fa-star"></i><hr class="hr2">
+         <!-- <hr class="hr1"><i class="fa fa-star"></i><hr class="hr2"> -->
 
-          <p class="aboutpara scrollz">I am a self taught web developer who has learnt html,css, Javascript,Jquery and bootstrap too. I keep building websites and other apps to practice what I have learnt. This site is responsive. Go ahead and take a look at it in your mobile and see how they adjust to your screen size.</p>
+          <p class="aboutpara scrollz"></br>I am a self taught web developer who has learnt html,css, Javascript,Jquery and bootstrap too. I keep building websites and other apps to practice what I have learnt. This site is responsive. Go ahead and take a look at it in your mobile and see how they adjust to your screen size.</p>
         </div>
       </div>
-    </div>
-    </div>
+    </div><!-- aboutme div ends -->
+    
+  <div class="user">
+ 
+ <p>
+  <form method="post" action="/create-user" >
+  <input type="text" id="username" placeholder="username">
+  <input type="password" id="password" name="password">
+  <input type="submit" id="submit_btn" value="Submit" class="btn btn-warning">
+</form>
+ </p>
+
+<ul id="namelist">
+
+
+</ul>
+
+
+ 
+
+  </div><!-- requestz div ends -->
+
+<div id='twitterDiv' class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+  <h3>Tweets Here</h3>
+  <input type="text" id="tweetSearch" placeholder="enter keyword to search for"></input>
+  <button id="tweetButton" type="submit">Submit</button>
+<p id="tweetz">tweets appear here</p>
+
+</div><!--column ends -->
+</div><!--row ends -->
+
+      </div><!--2nd column ends -->
+
+
+
+    </div><!-- main row ends -->
+
+
+
+    
+
+    </div><!-- container-fluid div ends -->
 </body>
 
 </html>
