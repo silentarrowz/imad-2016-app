@@ -65,7 +65,6 @@ function createTemplate(data){
 }
 
 //===========================================================
-/*
 console.log('The bot is starting');
 var Twit = require('twit');
 var config = require('./config');
@@ -87,8 +86,7 @@ app.get('/t/:searchTerm', function(req, res) {
     var params ={
   q:'hillary',
   count:5
-};
-
+}
 params['q']=keyword;
 console.log('params object is : ',params);
     T.get('search/tweets', params, function(err, data) {
@@ -111,10 +109,6 @@ console.log('params object is : ',params);
 
 
 //============================================================
-*/
-
-
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
@@ -153,7 +147,6 @@ app.get('/hash/:input',function(req,res){
   res.send(hashString);
 });
 
-
 app.get('/weather',function(req,res){
   res.sendFile(path.join(__dirname,'weather.html'));
 });
@@ -162,12 +155,12 @@ app.get('/news',function(req,res){
   res.sendFile(path.join(__dirname,'news.html'));
 });
 
-app.get('/news.js',function(req,res){
-  res.sendFile(path.join(__dirname,'news.js'));
+app.get('/newsny.js',function(req,res){
+  res.sendFile(path.join(__dirname,'newsny.js'));
 });
 
-app.get('/news.css',function(req,res){
-  res.sendFile(path.join(__dirname,'news.css'));
+app.get('/newsny.css',function(req,res){
+  res.sendFile(path.join(__dirname,'newsny.css'));
 });
 
 app.get('/weather.css',function(req,res){
