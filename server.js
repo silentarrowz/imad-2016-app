@@ -63,7 +63,9 @@ function createTemplate(data){
     </html>`;
     return htmlTemplate;
 }
-
+// commenting out twit portion because it doesnt work in the hasura code console
+//although it's working perfectly in localhost
+/*
 //===========================================================
 console.log('The bot is starting');
 var Twit = require('twit');
@@ -109,7 +111,7 @@ console.log('params object is : ',params);
 
 
 //============================================================
-
+*/
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
 });
