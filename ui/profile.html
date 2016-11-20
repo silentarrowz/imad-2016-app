@@ -24,7 +24,7 @@
 
 <body>
  <!--Navbar Begins    -->
-  <nav class="navbar navbar-fixed-top scrolltop" id="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top scrolltop">
     <div class="container">
       <!-- navbar header begins   -->
       <div class="navbar-header">
@@ -43,8 +43,8 @@
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#aboutme">About</a></li>
-          <li><a href="#portfolioz">Portfolio</a></li>
-          <li><a href="#contactme">Contact</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/weather">Weather</a></li>
         </ul>
       </div>
       <!-- div collapse ends -->
@@ -52,66 +52,51 @@
     <!-- container ends -->
   </nav>
   <!--Navbar ends    -->
-  
-  <div class="container-fluid">
-    <div class="row" id="fullBody">
+  <div class="container-flud">
+<div class="row" id="mainbody">
+<div class="col-md-3 col-sm-3">
+<img class="img-responsive"  src="http://res.cloudinary.com/whizzy/image/upload/v1454699647/faraz_qwdqrx.jpg" alt="">
+</div>
+<div class="col-md-6 col-sm-6" id="maincontent">
+  <div id="aboutme">  <h1>My Portfolio</h1>
+ <p class="about">I am a self taught web developer who has learnt html,css, Javascript,Jquery, Ajax and bootstrap too. I keep building websites and other apps to practice what I have learnt. This site is responsive. Go ahead and take a look at it in your mobile and see how the different elements adjust to your screen size.<br>
+  And that's not all. <br>
+  I have recently learnt the usage and integration of api's and you can see it in action in my twitter and news app link to on this page.
 
-     
-      <div class=" col-md-12 col-sm-12 col-xs-12" id="column-main">
-        <div id="aboutme" class="about">
-      <div class="row">
-       
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <div id="img"><img class="img-responsive"  src="http://res.cloudinary.com/whizzy/image/upload/v1454699647/faraz_qwdqrx.jpg" alt=""></div>
 
-         <!-- <hr class="hr1"><i class="fa fa-star"></i><hr class="hr2"> -->
-
-          <p class="aboutpara scrollz"></br>I am a self taught web developer who has learnt html,css, Javascript,Jquery and bootstrap too. I keep building websites and other apps to practice what I have learnt. This site is responsive. Go ahead and take a look at it in your mobile and see how they adjust to your screen size.</p>
-        </div>
-      </div>
-    </div><!-- aboutme div ends -->
-    
-  <div class="user">
- 
- <p>
-  <form method="post" action="/create-user" >
-  <input type="text" id="username" placeholder="username">
-  <input type="password" id="password" name="password">
-  <input type="submit" id="submit_btn" value="Submit" class="btn btn-warning">
-</form>
  </p>
 
-<ul id="namelist">
+</div><!--aboutme div ends -->
 
 
-</ul>
-
-
- 
-
-  </div><!-- requestz div ends -->
-
-<div id='twitterDiv' class="row">
-  <div class="col-lg-12 col-md-12 col-sm-12">
+  <div id="twitterdiv">
   <h3>Tweets Here</h3>
   <input type="text" id="tweetSearch" placeholder="enter keyword to search for"></input>
   <button id="tweetButton" type="submit">Submit</button>
 <p id="tweetz">tweets appear here</p>
 
-</div><!--column ends -->
+
+</div><!--twitterdiv ends -->
+
+
+  </div><!-- main content div ends -->
+<div class="col-md-2 col-sm-2" id="rightcol">
+ <h3>Skills Learnt</h3>
+ <ul>
+<li>Html</li>
+<li>Css</li>
+<li>Javascript</li>
+<li>Jquery</li>
+<li>Bootstrap</li>
+<li>Ajax</li>
+<li>Node</li>
+<li>Express js</li>
+
+ </ul>
+</div>  
+
 </div><!--row ends -->
-
-      </div><!--2nd column ends -->
-
-
-
-    </div><!-- main row ends -->
-
-
-
-    
-
-    </div><!-- container-fluid div ends -->
+</div><!--container fluid ends -->
 </body>
 
 </html>
