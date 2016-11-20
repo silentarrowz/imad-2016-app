@@ -13,7 +13,7 @@ var configdb = {
     database:'silentarrowz',
     host:'db.imad.hasura-ap.io',
     port:'5432',
-    password:process.evn.DB_PASSWORD
+    password:process.env.DB_PASSWORD
 };
 
 var pool = new Pool(configdb);
