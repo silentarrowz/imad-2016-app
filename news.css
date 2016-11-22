@@ -1,28 +1,39 @@
-img{
-	width:200px;
-	height:200px;
-	}
+#headers{
+	text-align: center;
+	padding-bottom: 10px;
+}
 
 p{
-	float:left;
-	width:200px;
-	font-size:10px;
-	margin-right: 10px;
-	height:280px;
-	border:1px solid grey;
+	text-align: left;
+    width: 190px;
+    float:left;
+    margin-right: 10px;
+    font-family: "Courier";
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 350px;	
 	}
 
 .title{
+
 	font-weight:bold;
-	font-size:12px;
-	width:200px;
-}
-.container-fluid {
-    width: 900px;
-    text-align: center;
-    margin: 0 auto;
-}
-#currentNews{
+	font-size:14px;
+	width: 126px; 
+    font-family: "TimesNewRoman", Times, serif;
 	
-    text-align: center;
+}
+
+.news{
+	padding-left: 20px;
+	padding-right: 20px;
+	width:66%;
+	margin:0 auto;
+}
+
+#currentNews{
+	border:1px solid black;
+	box-shadow: 1px 5px 15px 5px;
+	padding: 5px 5px 5px 10px;
+    background-color: rgba(78, 78, 75, 0.06);
+    
 }
