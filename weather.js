@@ -4,7 +4,7 @@ var apiOpenWeatherUrl;
 var apiKey= "9ff24aa89f0e5dfc05d21e0903fcd70b";
 
 
-var baseOpenWeatherUrl = "http://api.openweathermap.org/data/2.5/weather";
+var baseOpenWeatherUrl = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather";
 
 function showPosition(position) {
   var x = document.getElementById('location');
