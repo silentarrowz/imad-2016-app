@@ -1,22 +1,45 @@
+<!doctype html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Fontawesome library -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <title>News app</title>
-    <link rel="stylesheet" href="news.css">
-    <script type="text/javascript" src="news.js"></script>
+    <link rel="stylesheet" href="newsny.css">
+    <script type="text/javascript" src="newsny.js"></script>
   </head>
   <body>
-    <div class="container-fluid">
-    <h1>IMAD</h1>
-    <h2>My News App</h2>
-    <div class="news">
-    <button id="getnews"> Click button to get news </button>
     
-      <div id="currentNews">Show news here</div>
+      <div class="row" id="headers">
+        <div class="col-lg-12 col-md-6 col-sm-6">
+    <h1>The IMAD Times App</h1>
+    
+    <button class="btn btn-default" id="sports"> Sports News </button>
+    <button class="btn btn-default" id="current"> Current Affairs </button>
+    <button class="btn btn-default" id="finance"> Finance </button>
+   
+  </div>
+  </div>
+   <div class="container-fluid">
+    <div class="news row">
+   
+    
+      <div id="currentNews" class="col-lg-12 col-md-6 col-sm-6" >Show news here</div>
            
           
-      
+      </div>
       
     </div>
-    </div>
+    
   </body>
 </html>
