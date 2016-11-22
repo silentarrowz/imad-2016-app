@@ -157,12 +157,12 @@ app.get('/news',function(req,res){
   res.sendFile(path.join(__dirname,'news.html'));
 });
 
-app.get('/newsny.js',function(req,res){
-  res.sendFile(path.join(__dirname,'newsny.js'));
+app.get('/news.js',function(req,res){
+  res.sendFile(path.join(__dirname,'news.js'));
 });
 
-app.get('/newsny.css',function(req,res){
-  res.sendFile(path.join(__dirname,'newsny.css'));
+app.get('/news.css',function(req,res){
+  res.sendFile(path.join(__dirname,'news.css'));
 });
 
 app.get('/weather.css',function(req,res){
