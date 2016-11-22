@@ -28,12 +28,21 @@ p{
 	padding-right: 20px;
 	width:66%;
 	margin:0 auto;
-}
-
-#currentNews{
 	border:1px solid black;
 	box-shadow: 1px 5px 15px 5px;
 	padding: 5px 5px 5px 10px;
     background-color: rgba(78, 78, 75, 0.06);
-    
 }
+
+h1{
+	font-family: 'Holtwood One SC', serif;
+	font-weight: bold;
+	text-align: center;
+	font-size: 46px;
+}
+
+#currentNews{
+	
+	padding: 5px 5px 5px 10px;
+}
+    
