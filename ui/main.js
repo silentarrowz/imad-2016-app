@@ -1,6 +1,7 @@
 window.onload = function(){
-  
-
+ //commenting out the twitter code as it's not allowed in the console
+//========================================================
+/*
 var twitterButton = document.getElementById('tweetButton');
 twitterButton.onclick = function(){
     var searchFor =document.getElementById('tweetSearch');
@@ -29,6 +30,8 @@ if(twitterxr.readyState ===XMLHttpRequest.DONE && twitterxr.status ===200){
          twitterxr.open('GET','http://silentarrowz.imad.hasura-app.io/t/'+searchForTerm,true);
          twitterxr.send(null);
 };//twitterbutton onclick function ends
+*/
+//======================================================
 
 
 var submitButton = document.getElementById('submit_btn');
