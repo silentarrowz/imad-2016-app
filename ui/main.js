@@ -34,8 +34,8 @@ if(twitterxr.readyState ===XMLHttpRequest.DONE && twitterxr.status ===200){
 //======================================================
 
 
-var submitButton = document.getElementById('submit_btn');
-submitButton.onclick = function(){
+var registerButton = document.getElementById('register_btn');
+registerButton.onclick = function(){
     var request = new XMLHttpRequest();
 
     request.onreadystatechange=function(){
