@@ -4,8 +4,14 @@ var path = require('path');
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var app = express();
+var session = require('express-session');
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}))
 
 var Pool = require('pg').Pool;
 var configdb = {
@@ -168,7 +174,7 @@ app.post('/login',function(req,res){
           if(hashedPassword===dbString){
               res.send('credentials are correct');
           }else{
-              res.send('403').send('username/password is invalid');
+              res.status('403').send('username/password is invalid');
           }
       }
     }
