@@ -35,7 +35,7 @@ georequest.onreadystatechange = function(){
   }  
 };
 
-georerquest.open('GET','https://www.geoip-db.com/json/',true);
+georequest.open('GET','https://www.geoip-db.com/json/',true);
 georequest.send(null);
 
 
