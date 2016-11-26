@@ -110,7 +110,7 @@ var position = new XMLHttpRequest();
 
 
 console.log("2nd time apiOpenWeatherUrl is : ", apiOpenWeatherUrl);
-xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude+'&lon='+position.coords.longitude+'&APPID=9ff24aa89f0e5dfc05d21e0903fcd70b', true);
+xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude+'&lon='+position.coords.longitude+'&APPID=9ff24aa89f0e5dfc05d21e0903fcd70b', true);
 xhr.send(null);
 }
 
