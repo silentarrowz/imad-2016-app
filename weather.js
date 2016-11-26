@@ -5,7 +5,7 @@ var apiKey= "9ff24aa89f0e5dfc05d21e0903fcd70b";
 
 
 var baseOpenWeatherUrl = "http://api.openweathermap.org/data/2.5/weather";
-/*
+
 function showPosition(position) {
   var x = document.getElementById('location');
   lat=position.coords.latitude;
@@ -18,12 +18,12 @@ function showPosition(position) {
 apiOpenWeatherUrl = "'"+ baseOpenWeatherUrl + "?lat="
  + position.coords.latitude + "&lon=" + position.coords.longitude + "&APPID=" + apiKey+"'";
  console.log('apiOpenWeatherUrl is : ', apiOpenWeatherUrl);
+}
 
- */
  
 //===============================
 //to get latitude and longitude from https://www.geoip-db.com/json/
-
+/*
 var georequest = new XMLHttpRequest();
 
 georequest.onreadystatechange = function(){
@@ -36,9 +36,10 @@ georequest.onreadystatechange = function(){
 };
 
 georequest.open('GET','https://www.geoip-db.com/json/',true);
+georequest.setRequestHeader('Access-Control-Allow-Origin: *');
 georequest.send(null);
 
-
+*/
 
 
 
