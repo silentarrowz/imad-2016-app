@@ -210,6 +210,14 @@ app.get('/weather.js',function(req,res){
   res.sendFile(path.join(__dirname,'weather.js'));
 });
 
+app.get('/invoice',function(req,res){
+  res.sendFile(path.join(__dirname,'invoice.html'));
+});
+
+app.get('/invoice.css',function(req,res){
+  res.sendFile(path.join(__dirname,'invoice.css'));
+});
+
 app.get('/gmaps',function(req,res){
   res.sendFile(path.join(__dirname,'gmaps.html'));
 });
