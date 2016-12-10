@@ -1,3 +1,4 @@
+
 .container{
 	width:90%;
 	margin:0 auto;
@@ -19,6 +20,7 @@ textarea{
 	width:90%;
 	margin:0 auto;
 	border:1px solid black;
+	padding-bottom: 20px;
 }
 
 .values{
@@ -50,10 +52,32 @@ padding-top: 0px;
     padding-bottom: 1px;
     height:100px;
 }
-
+.descriptions td{
+	margin-bottom: 15px;
+	font-size: 21px;
+}
 .t2 textarea{
-	height:25px;
+	height:18px;
 	width:45px;
-	position:relative;
-	margin-bottom:-10px;
+	font-size: 14px;
+	
+}
+.qty textarea{
+	width:72px;
+	text-align: right;
+}
+
+.t3 textarea{
+	height:18px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+button{
+	height:20px;
+
+}
+
+#addrow{
+	font-size: 12px;
 }
