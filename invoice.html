@@ -19,7 +19,7 @@
 
 
 <link rel="stylesheet" type="text/css" href="invoice.css">
-<script type="text/javascript" src="/ui/main.js" ></script>
+<script type="text/javascript" src="invoice.js" ></script>
 </head>
 <body>
 	<div class="container">
@@ -48,10 +48,10 @@ Challan No:<textarea>42</textarea><br>
 <table class="descriptions">
 <tr>
 <th class="values">Cases</th>
-<th class="values">Description</th>
+<th class="values description">Description</th>
 <th class="values">Size</th>
 <th class="values">Quantity</th>
-<th class="values">Rate</td>
+<th class="values rate">Rate</td>
 <th class="values">Value</th>
 </tr>
 <tr class="tables">
@@ -73,108 +73,26 @@ Challan No:<textarea>42</textarea><br>
 	</td>
 <td><textarea>5</textarea>
 </td>
-<td><textarea>10</textarea></td>
+<td class="qty"><textarea>10</textarea></td>
 
 <td>Rs.<textarea>250</textarea></td>
 <td></td>
 
 </tr>
 
-<tr class="t2">
-<td></td>
-<td>
-	
-	</td>
-<td><textarea>5</textarea>
-</td>
-<td><textarea>10</textarea></td>
 
-<td>Rs.<textarea>250</textarea></td>
-<td></td>
-
-</tr>
-
-<tr class="t2">
-<td></td>
-<td>
-	
-	</td>
-<td><textarea>5</textarea>
-</td>
-<td><textarea>10</textarea></td>
-
-<td>Rs.<textarea>250</textarea></td>
-<td></td>
-
-</tr>
-
-<tr class="t2">
-<td></td>
-<td>
-	
-	</td>
-<td><textarea>5</textarea>
-</td>
-<td><textarea>10</textarea></td>
-
-<td>Rs.<textarea>250</textarea></td>
-<td></td>
-
-</tr>
-
-<tr class="t2">
-<td></td>
-<td>
-	
-	</td>
-<td><textarea>5</textarea>
-</td>
-<td><textarea>10</textarea></td>
-
-<td>Rs.<textarea>250</textarea></td>
-<td></td>
-
-</tr>
-
-<tr class="t2">
-<td></td>
-<td>
-	
-	</td>
-<td><textarea>5</textarea>
-</td>
-<td><textarea>10</textarea></td>
-
-<td>Rs.<textarea>250</textarea></td>
-<td></td>
-
-</tr>
-<tr class="t2">
-<td></td>
-<td>
-	
-	</td>
-<td><textarea>5</textarea>
-</td>
-<td><textarea>10</textarea></td>
-
-<td>Rs.<textarea>250</textarea></td>
-<td></td>
-
-</tr>
 <tr class="t3">
 <td></td>
 <td>
 	
 	</td>
-<td></td>
+<td id="addrow"><button>Add Row</button></td>
 <td>Total:</td>
 
 <td>Rs.<textarea>250</textarea></td>
 <td></td>
 
 </tr>
-
 </table>
 </div><!--container div ends -->
 </body>
