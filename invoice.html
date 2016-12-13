@@ -23,10 +23,12 @@
 </head>
 <body>
 	<div class="container">
+	
 <h1>BENGAL RUBBER MANUFACTURING CO.</h1>
 <h4>2, NEW TANGRA ROAD, KOLKATA-700046</h4>
+<div class="invoicetype"><textarea>PROFORMA INVOICE</textarea></div>
 <table class="details">
-<tr>
+<tr id="leftright">
 <td class="left">
 To,<br>
 <textarea>Kaveri Corporation
@@ -45,18 +47,18 @@ Challan No:<textarea>42</textarea><br>
 </td>
 </tr>
 </table>
-<table class="descriptions">
+<table id="descriptions">
 <tr>
-<th class="values">Cases</th>
+<th class="values cases">Cases</th>
 <th class="values description">Description</th>
-<th class="values">Size</th>
+<th class="values size">Size</th>
 <th class="values">Quantity</th>
 <th class="values rate">Rate</td>
 <th class="values">Value</th>
 </tr>
 <tr class="tables">
 <td></td>
-<td>
+<td class="describe">
 	<p id="desc">
 		<textarea>“BRC” Brand Protective Rubber Canvas Boots Fully Moulded Type-II with ISI approved Steel toe cap conforming to IS:3976-2003 having BIS and DGMS Amendment letter.</textarea></p></td>
 <td></td>
@@ -71,29 +73,68 @@ Challan No:<textarea>42</textarea><br>
 <td>
 	
 	</td>
-<td><textarea>5</textarea>
+<td class="size"><textarea>5</textarea>
 </td>
-<td class="qty"><textarea>10</textarea></td>
+<td class="qty" ><input type="text" name="txtbox[]" value="450" id="n1"></td>
 
-<td>Rs.<textarea>250</textarea></td>
+<td></td>
 <td></td>
 
 </tr>
 
+<tr class="buttons">
+	<td></td>
+	<td></td>
+	<td> 
+		<button id="add">Add Row</button>
+	</td>
+	<td><button id="submit">Submit</button></td>
+	<td></td>
+	<td></td>
+	 </tr>
 
 <tr class="t3">
 <td></td>
 <td>
 	
 	</td>
-<td id="addrow"><button>Add Row</button></td>
-<td>Total:</td>
-
-<td>Rs.<textarea>250</textarea></td>
 <td></td>
+<td id="t3row">Total <span id="total"></span> Pairs</td>
+
+<td class="raterow">Rs.<input type="text" name="txtbox[]" value="250" id="rate"></td>
+<td id="value">Rs.</td>
 
 </tr>
+<tr></tr>
+<tr id="cstrow">
+	<td></td>
+<td>
+<p id="cstcform">
+		<textarea class="cstarea">C.S.T @ 2% (Against C Form)</textarea></p>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td><span id="cst">Rs.</span></td>
+</tr>
+
+<tr id="fullfinal">
+	<td></td>
+<td>
+<p id="inwords">
+		<textarea class="words">Rupees in words</textarea><br>
+	( This Bill for 100% + C.S.T. @2% )</p>
+</td>
+<td></td>
+<td></td>
+<td id="finaltotal">Total:</td>
+<td><span id="final">Rs.</span></td>
+</tr>
+
+
 </table>
+<div class="lowerleft">C.S.T.No:19390406216<br>VAT No:19390406022</div>
+<div class="lowerright">E. & O.<br><br><br>Signature</div>
 </div><!--container div ends -->
 </body>
 </html>
