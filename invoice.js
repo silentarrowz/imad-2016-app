@@ -16,7 +16,12 @@ function addRow(tableID) {
 			
 
 			var cell2 = row.insertCell(1);
-			
+			cell2.className = "bags";
+			var element1 = document.createElement("input");
+			element1.type="text";
+			element1.name="txtbox[]";
+			element1.value="0";
+			cell2.appendChild(element1);
 
 			var cell3 = row.insertCell(2);
 			cell3.className = "size";
