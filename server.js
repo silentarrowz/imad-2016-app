@@ -162,6 +162,8 @@ app.post('/login',function(req,res){
       res.status(500).send(err.toString());
       
     }else{
+      console.log("result.rows is : ",result.rows);
+      console.log("result.rows.length is : ",result.rows.length);
       if(result.rows.length ===0){
           res.send(403).send('username/password is not valid');
       }else{
