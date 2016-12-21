@@ -165,7 +165,7 @@ app.post('/login',function(req,res){
       console.log("result.rows is : ",result.rows);
       console.log("result.rows.length is : ",result.rows.length);
       if(result.rows.length ===0){
-          res.send(403).send('username/password is not valid');
+          res.status(403).send('username/password is not valid');
       }else{
           //match the password
           var dbString = result.rows[0].password;
