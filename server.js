@@ -125,7 +125,7 @@ app.get('/', function (req, res) {
 function hash(input,salt){
   //how to create hash
   var hashed = crypto.pbkdf2Sync(input,salt, 10000, 512, 'sha512');
-  return ['pbkdf2Sync',salt,hashed.toString('hex')].join('$');
+  return ['pbkdf2Sync',"10000",salt,hashed.toString('hex')].join('$');
 }
 
 app.post('/create-user',function(req,res){
@@ -172,6 +172,7 @@ app.post('/login',function(req,res){
           console.log('dbString is : ',dbString);
           console.log('result.rows is :',result.rows);
           var salt = dbString.split('$')[2];
+          console.log("salt is : ",salt);
           var hashedPassword = hash(password,salt);//creating a hash based on password submitted and the original salt
           if(hashedPassword===dbString){
               res.send('credentials are correct');
