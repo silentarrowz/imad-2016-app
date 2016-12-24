@@ -62,6 +62,9 @@ textarea{
     width:96px;
     
 }
+.right textarea:first-child{
+	width:150px;
+}
 
 
 #descriptions{
@@ -77,7 +80,7 @@ textarea{
 	border:1px solid black;
 }
 .bags [type="text"]{
-	width:150px;
+	width:180px;
 	padding-left:30px;
 	font-size: 16px;
 }
