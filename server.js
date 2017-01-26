@@ -119,7 +119,7 @@ console.log('params object is : ',params);
 //============================================================
 */
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 function hash(input,salt){
@@ -238,8 +238,8 @@ app.get('/profile',function(req,res){
 });
 */
 
-app.get('/ui/profile.css',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','profile.css'));
+app.get('/profile.css',function(req,res){
+    res.sendFile(path.join(__dirname,'profile.css'));
  });
 
 var comments=[];
@@ -253,8 +253,8 @@ app.get('/submit_comment',function(req,res){
     //to render those comments on the page
 });
 
-app.get('/ui/main.js',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','main.js'));
+app.get('/main.js',function(req,res){
+    res.sendFile(path.join(__dirname,'main.js'));
  });
 
 var counter=0;
