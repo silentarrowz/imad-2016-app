@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Fontawesome library -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="profile.css">
+<script type="text/javascript" src="main.js" ></script>
+</head>
+
+<body>
+ <!--Navbar Begins    -->
+  <nav class="navbar navbar-default navbar-fixed-top scrolltop">
+    <div class="container">
+      <!-- navbar header begins   -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+ <span class="sr-only">Toggle Navigation</span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+  </button>
+        <a class="navbar-brand" href="#">Faraz Ahmed</a>
+
+      </div>
+      <!-- navbar header ends -->
+
+      <!-- div collapse begins -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#aboutme">About</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/weather">Weather</a></li>
+         <li><a href="/invoice">Invoice Generator</a></li>
+        </ul>
+      </div>
+      <!-- div collapse ends -->
+    </div>
+    <!-- container ends -->
+  </nav>
+  <!--Navbar ends    -->
+  <div class="container-flud">
+<div class="row" id="mainbody">
+<div class="col-md-3 col-sm-3">
+<img class="img-responsive"  src="https://res.cloudinary.com/whizzy/image/upload/v1454699647/faraz_qwdqrx.jpg" alt="">
+</div>
+<div class="col-md-6 col-sm-6" id="maincontent">
+  <div id="aboutme">  <h1>My Portfolio</h1>
+ <p class="about">I am a self taught web developer who has learnt html,css, Javascript,Jquery, Ajax and bootstrap too. I keep building websites and other apps to practice what I have learnt. This site is responsive. Go ahead and take a look at it in your mobile and see how the different elements adjust to your screen size.<br>
+  And that's not all. <br>
+  I have recently learnt the usage and integration of api's and you can see it in action in my twitter and news app link to on this page.
+ Mostly I use my skills for problem solving and to make things easier for myself and others. Recently I made an invoice generator app as I used to see 
+  people spend an hour or more making an invoice in ms word.<br> So, I got to work and made this new app to make things easier for
+  my colleagues and myself.<br> Here's the link to it --> <a href="/invoice">My Invoice Generator app</a>
+
+ </p>
+
+</div><!--aboutme div ends -->
+
+<!-- commenting out the twitter div even though it works, as the hasura console doesnt allow me to install twit module -->
+<!--
+  <div id="twitterdiv">
+  <h3>Tweets Here</h3>
+  <input type="text" id="tweetSearch" placeholder="enter keyword to search for"></input>
+  <button id="tweetButton" type="submit">Submit</button>
+<p id="tweetz">tweets appear here</p>
+
+
+</div>
+-->
+<!--twitterdiv ends -->
+
+  </div><!-- main content div ends -->
+<div class="col-md-2 col-sm-2" id="rightcol">
+    <h4>Please register Below:</h4>
+ Name:<br>  <input type="text" name="username" id="username">
+  Password:<br> <input type="password" name="password" id="password"><br>
+  <button id="login_btn">Login</button>
+  <button id="register_btn">Register</button>
+ <h3>Skills Learnt</h3>
+ <ul>
+<li>Html</li>
+<li>Css</li>
+<li>Javascript</li>
+<li>Jquery</li>
+<li>Bootstrap</li>
+<li>Ajax</li>
+<li>Node</li>
+<li>Express js</li>
+
+ </ul>
+</div>  
+
+</div><!--row ends -->
+</div><!--container fluid ends -->
+</body>
+
+</html>

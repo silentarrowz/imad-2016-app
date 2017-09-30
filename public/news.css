@@ -1,0 +1,47 @@
+#headers{
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top:10px;
+}
+
+p{
+	text-align: left;
+    width: 190px;
+    float:left;
+    margin-right: 10px;
+    font-family: "Courier";
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 350px;	
+	}
+
+.title{
+
+	font-weight:bold;
+	font-size:14px;
+	width: 126px; 
+    font-family: "TimesNewRoman", Times, serif;
+	
+}
+
+.news{
+
+	width:68%;
+	margin:0 auto;
+	border:1px solid black;
+	box-shadow: 1px 5px 15px 5px;
+	padding: 5px 5px 5px 10px;
+    background-color: rgba(78, 78, 75, 0.06);
+}
+
+h1{
+	font-family: 'Holtwood One SC', serif;
+	font-weight: bold;
+	text-align: center;
+	font-size: 46px;
+}
+
+#currentNews{
+	padding: 5px 5px 5px 10px;
+}
+    

@@ -1,0 +1,62 @@
+body{
+  background-color: #e9ebee;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.navbar-default .navbar-brand{
+  color:white;
+}
+.navbar-default{
+  background-color: #3b5998;
+
+}
+.navbar-default .navbar-nav>li>a{
+  color:white;
+}
+.navbar-default .navbar-nav>.active>a{
+  background-color: #337ab7;
+  color:white;
+}
+
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>li>a:hover{
+  background-color: #337ab7;
+  color:white;
+
+}
+
+img{
+  border:2px solid rgba(202, 199, 199, 0.7);;
+  width:85%;
+}
+
+#mainbody{
+  padding-top: 5px;
+  margin-top: 51px;
+  padding-left:15px;
+  
+}
+
+#aboutme,#twitterdiv{
+  background-color: white;
+  border:1px solid rgba(202, 199, 199, 0.7);
+  padding:5px 5px 5px 5px;
+  }
+
+#twitterdiv{
+  margin-top: 5px;
+} 
+
+#aboutme h1{
+  text-align: center;
+}
+
+
+#rightcol{
+  background-color: white;
+  border:1px solid rgba(202, 199, 199, 0.7);
+  margin-left:31px;
+}
+
+
+.twitlabel{
+  color:blue;
+}
